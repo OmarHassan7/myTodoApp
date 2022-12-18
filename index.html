@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoListApp</title>
+    <script src="./implmentEditTodoList.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .container {
+        width: 800px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form {
+        width: 700px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eaeaef;
+      }
+      .tasks {
+        padding: 20px;
+        margin-top: 30px;
+        width: 800px;
+        background-color: #eaeaef;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        border-radius: 20px;
+      }
+      input[type="text"] {
+        width: 550px;
+        height: 40px;
+        border: 2px solid black;
+        padding: 10px;
+      }
+      .todo {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 20px;
+        background-color: white;
+        cursor: pointer;
+        position: relative;
+      }
+      .todo-Done {
+        background-color: rgb(47, 207, 25);
+      }
+      .edit {
+        position: absolute;
+        right: 7rem;
+        background-color: rgb(0, 255, 255);
+        font-size: 20px;
+        width: 70px;
+        padding: 7px;
+        color: white;
+        border-radius: 7px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .delete {
+        background-color: red;
+        font-size: 20px;
+        padding-right: 7px;
+        padding-left: 7px;
+        color: white;
+        border-radius: 12px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .task {
+        font-size: 20px;
+        padding: 7px;
+        border-radius: 7px;
+        font-weight: bold;
+      }
+      .editedInput {
+        position: absolute;
+        z-index: -2;
+        width: 350px;
+        height: 40px;
+      }
+      .showInput {
+        z-index: 100;
+        font-size: 20px;
+        padding: 7px;
+        border-radius: 7px;
+        font-weight: bold;
+      }
+      /* .formElklam {
+        position: absolute;
+        z-index: -3;
+        width: 350px;
+        height: 40px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form mt-10 rounded-md">
+        <form action="">
+          <input type="text" class="input rounded-md text-lg" />
+        </form>
+        <button class="add bg-orange-600 w-16 ml-4 h-8 rounded-lg font-bold">
+          Add
+        </button>
+      </div>
+      <div class="tasks"></div>
+    </div>
+  </body>
+</html>
